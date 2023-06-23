@@ -6,24 +6,6 @@ using System.Threading.Tasks;
 
 namespace TesteLogica
 {
-    /*public class Network
-    {
-        private int[] numbersArray;
-
-        public Network(int numberOfElements)
-        {
-            if (numberOfElements <= 0)
-            {
-                throw new Exception("A quantidade total precisa ser maior do que 0 (zero).");
-            }
-            else
-            {
-                numbersArray = new int[numberOfElements];
-            }
-        }
-
-
-    }*/
     public class Network
     {
         private int[] integersArray;
@@ -65,7 +47,7 @@ namespace TesteLogica
         {
             if (x < 0 || x >= integersArray.Length || y < 0 || y >= integersArray.Length)
             {
-                throw new ArgumentException("Invalid element index.");
+                throw new ArgumentException("Número(s) inválido(s).");
             }
 
             Union(x, y);
@@ -75,7 +57,7 @@ namespace TesteLogica
         {
             if (x < 0 || x >= integersArray.Length || y < 0 || y >= integersArray.Length)
             {
-                throw new ArgumentException("Invalid element index.");
+                throw new ArgumentException("Número(s) inválido(s).");
             }
 
             return Find(x) == Find(y);
