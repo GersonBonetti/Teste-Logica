@@ -26,6 +26,7 @@ namespace TesteLogica
             }
         }
 
+
         private int Find(int x)
         {
             if (integersArray[x] != x)
@@ -47,7 +48,7 @@ namespace TesteLogica
         {
             if (x < 0 || x >= integersArray.Length || y < 0 || y >= integersArray.Length)
             {
-                throw new ArgumentException("Número(s) inválido(s).");
+                throw new ArgumentException("Os números precisam ser maior do que zero e menor do que a quantidade total de elementos.");
             }
 
             Union(x, y);
@@ -57,7 +58,7 @@ namespace TesteLogica
         {
             if (x < 0 || x >= integersArray.Length || y < 0 || y >= integersArray.Length)
             {
-                throw new ArgumentException("Número(s) inválido(s).");
+                throw new ArgumentException("Os números precisam ser maior do que zero e menor do que a quantidade total de elementos.");
             }
 
             return Find(x) == Find(y);

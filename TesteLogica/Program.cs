@@ -16,18 +16,19 @@ namespace TesteLogica
                 throw new ArgumentException("A quantidade total precisa ser um número inteiro e maior do que zero");
             }
 
-            Network network = new Network(totalElements);
+            Network network = new Network(totalElements + 1);
 
             Console.WriteLine("");
-            Console.Write("Você deseja CONECTAR dois números da lista? (S/N): ");
+            Console.Write("Você gostaria de CONECTAR dois números da lista? (S/N): ");
             string yesOrNot = Console.ReadLine().ToUpper();
 
             if (yesOrNot == "S")
             {
+                Console.WriteLine("");
+                Console.WriteLine("══════════════════════════════════════════════════════════");
                 do
                 {
-                    Console.WriteLine("");
-                    Console.Write("Por favor, digite o primeiro número para a conexão: ");
+                    Console.Write("Por gentileza, digite o primeiro número para a conexão: ");
                     bool verifyOrigin = int.TryParse(Console.ReadLine(), out int origin);
 
                     if (verifyOrigin)
@@ -50,18 +51,20 @@ namespace TesteLogica
                     }
 
                     Console.WriteLine("");
-                    Console.Write("Deseja fazer uma nova CONEXÃO? (S/N): ");
+                    Console.Write("Gostaria de fazer uma nova CONEXÃO? (S/N): ");
                     yesOrNot = Console.ReadLine().ToUpper();
 
                 } while (yesOrNot == "S");
             }
 
             Console.WriteLine("");
+            Console.WriteLine("══════════════════════════════════════════════════════════");
             Console.Write("Você deseja CONSULTAR alguma conexão da lista? (S/N): ");
             yesOrNot = Console.ReadLine().ToUpper();
 
             if (yesOrNot == "S")
             {
+
                 do
                 {
                     Console.WriteLine("");
@@ -99,15 +102,15 @@ namespace TesteLogica
                     }
 
                     Console.WriteLine("");
-                    Console.WriteLine("Deseja fazer uma nova CONSULTAR? (S/N): ");
+                    Console.WriteLine("Deseja fazer uma nova CONSULTA? (S/N): ");
                     yesOrNot = Console.ReadLine().ToUpper();
 
                 } while (yesOrNot == "S");
             }
 
-
+            Console.WriteLine("");
+            Console.WriteLine("Fim do programa! Obrigado por sua atenção :)");
             Console.ReadLine();
         }
-
     }
 }
